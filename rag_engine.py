@@ -13,15 +13,15 @@ from typing import Dict, List, Optional, Tuple
 
 import faiss
 import numpy as np
-from langchain.docstore.document import Document
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.docstore.inmemory import InMemoryDocstore
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_community.docstore.in_memory import InMemoryDocstore
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_openai import ChatOpenAI
 from rank_bm25 import BM25Okapi
 from sentence_transformers import CrossEncoder
-from langchain.schema import HumanMessage, SystemMessage
+from langchain_core.documents import Document
+from langchain_core.messages import HumanMessage, SystemMessage
 
 
 class AdvancedRAGEngine:
